@@ -20,4 +20,4 @@ Sandbox.define('/person', 'POST', createUserHandler);
 Sandbox.define('/users', 'GET', getUsersHandler);
 
 // Using named route parameters to simulate getting a specific user
-Sandbox.define('/users/{username}', 'GET', getUserByUsernameHandler);
+Sandbox.define('/person/{id}', 'PUT', getUserByUsernameHandler);

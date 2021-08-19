@@ -14,18 +14,19 @@ export const getUsersHandler = (req, res) => {
     return res.json(state.users);
 }
 
-export const getUserByUsernameHandler = (req, res) => {
-    // retrieve users or, if there are none, init to empty array
-    state.users = state.users || [];
-
+export const getUserByUsernameHandler = function(req, res){
     // route param {username} is available on req.params
-    var username = req.params.username;
-
-    // log it to the console
-    console.log("Getting user " + username + " details");
-
-    // use lodash to find the user in the array
-    var user = _.find(state.users, { "username": username});
-
-    return res.json(user);
+    try{
+    var id = req.params.id;
+    }
+    catch(e)
+    {
+        return res.json(
+            {
+                "status": "400",
+                "message":"Invalid ID"
+            }
+            );
+    }
+    
 }
