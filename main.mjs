@@ -6,9 +6,11 @@
 import { createUserHandler, getUsersHandler, getUserByUsernameHandler } from "users.mjs";
 
 // A basic route returning a canned response
-Sandbox.define('/hello', 'get', function(req, res) {
-    // send 'Hello world' response
-    res.send('Hello world');
+Sandbox.define('/hello', 'get', function(req, res){
+    return res.json({
+        "status": "201",
+        "message": "Created"
+    });
 });
 
 // Using stateful behaviour to simulate creating users
