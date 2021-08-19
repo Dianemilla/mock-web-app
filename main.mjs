@@ -7,20 +7,17 @@ import { createUserHandler, getUsersHandler, getUserByUsernameHandler } from "us
 
 // A basic route returning a canned response
 Sandbox.define('/persons', 'GET', function(req, res){
-    return res.json(
-        {
-      "persons": [
+    return res.json({
+        "status": "200",
+        "persons": [
         [
           {
-            "name": "persons/a353-x51d",
-            "displayName": "ApiGuru84",
+            "id": 1,
+            "name": "Purnanga Borah",
             "subscribed": true
           }
         ]
-      ],
-      "nextPageToken": "string"
-    }
-        );
+      ]});
 });
 
 // Using stateful behaviour to simulate creating users
