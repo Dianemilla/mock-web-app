@@ -12,7 +12,7 @@ Sandbox.define('/hello', 'get', function(req, res) {
 });
 
 // Using stateful behaviour to simulate creating users
-Sandbox.define('/users', 'POST', createUserHandler);
+Sandbox.define('/person', 'POST', createUserHandler);
 
 // Using stateful behaviour to simulate getting all users
 Sandbox.define('/users', 'GET', getUsersHandler);

@@ -1,11 +1,9 @@
-export const createUserHandler = (req, res) => {
-    // retrieve users or, if there are none, init to empty array
-    state.users = state.users || [];
-
-    // persist user by adding to the state object
-    state.users.push(req.body);
-
-    return res.json({status: "ok"});
+export const createUserHandler = function(req, res){
+    
+    return res.json({
+        status: "201",
+        message: "Created"
+    });
 }
 
 export const getUsersHandler = (req, res) => {
