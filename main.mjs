@@ -6,10 +6,10 @@
 import { createUserHandler, getUsersHandler, getUserByUsernameHandler } from "users.mjs";
 
 // A basic route returning a canned response
-Sandbox.define('/hellow', 'GET', function(req, res){
+Sandbox.define('/person', 'GET', function(req, res){
     return res.json({
-        "status": "201",
-        "message": "Created"
+        "name": "Purnanga Borah",
+        "company": "Accenture Inc"
     });
 });
 
