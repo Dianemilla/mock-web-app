@@ -17,7 +17,7 @@ Sandbox.define('/person', 'GET', function(req, res){
 Sandbox.define('/person', 'POST', createUserHandler);
 
 // Using stateful behaviour to simulate getting all users
-Sandbox.define('/users', 'GET', getUsersHandler);
+Sandbox.define('/person/{id}', 'DELETE', getUsersHandler);
 
 // Using named route parameters to simulate getting a specific user
 Sandbox.define('/person/{id}', 'PUT', getUserByUsernameHandler);
