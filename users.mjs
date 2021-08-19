@@ -30,13 +30,12 @@ export const getUserByUsernameHandler = function(req, res){
     // route param {username} is available on req.params
     try {
         var id = req.params.id;
-        if (id==1){
+        if (id == "1") {
             return res.json({
-            "status": "200",
-            "message": "Details successfully updated"
-        });
-        }
-        else
+                "status": "200",
+                "message": "Details successfully updated"
+            });
+        } else
             throw "meh";
     } catch (e) {
         return res.json({
