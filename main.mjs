@@ -6,11 +6,21 @@
 import { createUserHandler, getUsersHandler, getUserByUsernameHandler } from "users.mjs";
 
 // A basic route returning a canned response
-Sandbox.define('/person', 'GET', function(req, res){
-    return res.json({
-        "name": "Purnanga Borah",
-        "company": "Accenture Inc"
-    });
+Sandbox.define('/persons', 'GET', function(req, res){
+    return res.json(
+        {
+      "persons": [
+        [
+          {
+            "name": "persons/a353-x51d",
+            "displayName": "ApiGuru84",
+            "subscribed": true
+          }
+        ]
+      ],
+      "nextPageToken": "string"
+    }
+        );
 });
 
 // Using stateful behaviour to simulate creating users
