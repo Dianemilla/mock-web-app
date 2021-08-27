@@ -19,6 +19,7 @@ export const getUsersHandler = function(req, res){
         } else
             throw "meh";
     } catch (e) {
+        res.status(400);
         return res.json({
             "status": "400",
             "message": "Invalid ID"
@@ -39,6 +40,7 @@ export const getUserByUsernameHandler = function(req, res){
         } else
             throw "meh";
     } catch (e) {
+        res.status(400);
         return res.json({
             "status": "400",
             "message": "Invalid ID"
