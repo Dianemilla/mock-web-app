@@ -40,10 +40,10 @@ export const getUserByUsernameHandler = function(req, res){
         } else
             throw "meh";
     } catch (e) {
-        res.status(400);
-        return res.json({
+        res.status(400).send({
             "status": "400",
             "message": "Invalid ID"
         });
+        //return res.json();
     }
 }
