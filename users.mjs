@@ -12,14 +12,14 @@ export const getUsersHandler = function(req, res){
     try {
         var id = req.params.id;
         if (id == "1") {
-            return res.send(200,{
+            res.send(200, {
                 "status": "200",
                 "message": "Person successfully deleted"
             });
         } else
             throw "meh";
     } catch (e) {
-        res.send(400,{
+        res.send(400, {
             "status": "400",
             "message": "Invalid ID"
         });
