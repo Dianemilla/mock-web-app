@@ -32,7 +32,7 @@ export const getUserByUsernameHandler = function(req, res){
     try {
         var id = req.params.id;
         res.send(id);
-        if (id == "1") {
+        if (id == 1) {
             return res.json({
                 "status": "200",
                 "message": "Details successfully updated"
