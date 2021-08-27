@@ -63,7 +63,7 @@ Sandbox.define('/test/persons', 'POST', createUserHandler);
 Sandbox.define('/test/persons', 'DELETE', getUsersHandler);
 
 // Using named route parameters to simulate getting a specific user
-Sandbox.define('/test/persons', 'PUT', getUserByUsernameHandler);
+Sandbox.define('/test/persons/{id}', 'PUT', getUserByUsernameHandler);
 
 
 // Using stateful behaviour to simulate creating users
