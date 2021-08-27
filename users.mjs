@@ -11,16 +11,15 @@ export const getUsersHandler = function(req, res){
     // route param {username} is available on req.params
     try {
         var id = req.params.id;
-        if (id == 1) {
-            return res.json({
+        if (id == "1") {
+            return res.send(200,{
                 "status": "200",
                 "message": "Person successfully deleted"
             });
         } else
             throw "meh";
     } catch (e) {
-        res.status(400);
-        return res.json({
+        res.send(400,{
             "status": "400",
             "message": "Invalid ID"
         });
