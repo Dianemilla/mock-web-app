@@ -16,7 +16,13 @@ export const getUsersHandler = function(req, res){
                 "status": "200",
                 "message": "Person successfully deleted"
             });
-        } else
+        } 
+        else if (id == "3") {
+            res.send(400, {
+                "status": "400",
+                "message": "Not existing"
+            });
+        }else
             throw "meh";
     } catch (e) {
         res.send(400, {
