@@ -22,15 +22,15 @@ Sandbox.define('/persons', 'GET', function(req, res){
 Sandbox.define('/prod/persons', 'GET', function(req, res){
     return res.json({
         "status": "200",
+        "message": "Details listed",
         "persons": [
-        [
-          {
-            "id": 1,
-            "name": "Purnanga Borah",
-            "subscribed": true
-          }
+            [{
+                "id": 1,
+                "name": "Purnanga Borah",
+                "subscribed": true
+            }]
         ]
-      ]});
+    });
 });
 
 Sandbox.define('/test/persons', 'GET', function(req, res){
