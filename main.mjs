@@ -36,15 +36,15 @@ Sandbox.define('/prod/persons', 'GET', function(req, res){
 Sandbox.define('/test/persons', 'GET', function(req, res){
     return res.json({
         "status": "200",
+        "message" : "Details listed",
         "persons": [
-        [
-          {
-            "id": 1,
-            "name": "Purnanga Borah",
-            "subscribed": true
-          }
+            [{
+                "id": 1,
+                "name": "Purnanga Borah",
+                "subscribed": true
+            }]
         ]
-      ]});
+    });
 });
 // Using stateful behaviour to simulate creating users
 Sandbox.define('/persons', 'POST', createUserHandler);
