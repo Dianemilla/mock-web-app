@@ -1,10 +1,8 @@
 export const createUserHandler = function(req, res){
-    return res.json(
-        {
+    return res.send(201,{
         "status": "201",
         "message": "Created"
-        }
-    );
+    });
 }
 
 export const getUsersHandler = function(req, res){
