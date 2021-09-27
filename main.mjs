@@ -7,17 +7,18 @@ import { createUserHandler, getUsersHandler, getUserByUsernameHandler } from "us
 
 // A basic route returning a canned response
 Sandbox.define('/persons', 'GET', function(req, res){
+    setTimeout(function(){ alert("After 5 seconds!"); }, 5000);
+    
     return res.json({
         "status": "200",
         "persons": [
-        [
-          {
-            "id": 1,
-            "name": "Purnanga Borah",
-            "subscribed": true
-          }
+            [{
+                "id": 1,
+                "name": "Purnanga Borah",
+                "subscribed": true
+            }]
         ]
-      ]});
+    });
 });
 Sandbox.define('/prod/persons', 'GET', function(req, res){
     return res.json({
