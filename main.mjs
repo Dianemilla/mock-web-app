@@ -34,9 +34,13 @@ Sandbox.define('/prod/persons', 'GET', function(req, res){
 });
 
 Sandbox.define('/test/persons', 'GET', function(req, res){
-    return res.json({
+    var id = req.query.id;
+    
+    
+        if (id == "1") {
+            res.send(200, {
         "status": "200",
-        "message" : "Details listed",
+        "message": "Details listed",
         "persons": [
             [{
                 "id": 1,
@@ -45,6 +49,15 @@ Sandbox.define('/test/persons', 'GET', function(req, res){
             }]
         ]
     });
+        } else if (id == "3") {
+            res.send(400, {
+                "status": "400",
+                "message": "Not existing"
+            });
+        } else
+            throw "meh";
+    
+    
 });
 // Using stateful behaviour to simulate creating users
 Sandbox.define('/persons', 'POST', createUserHandler);
