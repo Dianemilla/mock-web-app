@@ -37,27 +37,23 @@ Sandbox.define('/test/persons', 'GET', function(req, res){
     var id = req.query.id;
     
     
-        if (id == "1") {
-            res.send(200, {
-        "status": "200",
-        "message": "Details listed",
-        "persons": [
-            [{
-                "id": 1,
-                "name": "Purnanga Borah",
-                "subscribed": true
-            }]
-        ]
-    });
-        } else if (id == "3") {
-            res.send(400, {
-                "status": "400",
-                "message": "Not existing"
-            });
-        } else
-            throw "meh";
-    
-    
+    if (id == "1") {
+        res.send(200, {
+            "status": "200",
+            "message": "Details listed",
+            "persons": [
+                [{
+                    "id": 1,
+                    "name": "Purnanga Borah",
+                    "subscribed": true
+                }]
+            ]
+        });
+    } else{
+         res.send(400, {
+            "status": "400",
+            "message": "ID not existing"
+        });}
 });
 // Using stateful behaviour to simulate creating users
 Sandbox.define('/persons', 'POST', createUserHandler);
