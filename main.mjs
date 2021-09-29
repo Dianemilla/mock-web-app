@@ -7,8 +7,7 @@ import { createUserHandler, getUsersHandler, getUserByUsernameHandler } from "us
 
 // A basic route returning a canned response
 Sandbox.define('/persons', 'GET', function(req, res){
-    
-    return res.json({
+    return res.send(200,{
         "status": "200",
         "persons": [
             [{
