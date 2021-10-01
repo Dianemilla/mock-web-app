@@ -40,19 +40,19 @@ Sandbox.define('/test/persons', 'GET', function(req, res){
         res.send(200, {
             "status": "200",
             "message": "Details listed",
-            "persons": [
+            "persons": 
                 [{
                     "id": 1,
                     "name": "Purnanga Borah",
                     "subscribed": true
                 }]
-            ]
-        });
-    } else{
-         res.send(400, {
+            });
+    } else {
+        res.send(400, {
             "status": "400",
             "message": "ID not existing"
-        });}
+        });
+    }
 });
 // Using stateful behaviour to simulate creating users
 Sandbox.define('/persons', 'POST', createUserHandler);
