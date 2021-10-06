@@ -32,6 +32,45 @@ Sandbox.define('/prod/persons', 'GET', function(req, res){
     });
 });
 
+Sandbox.define('/dev/persons', 'GET', function(req, res){
+    return res.json({
+        "status": "200",
+        "message": "Details listed",
+        "persons": [
+            [{
+                "id": 1,
+                "name": "Purnanga Borah",
+                "subscribed": true
+            }]
+        ]
+    });
+});
+Sandbox.define('/qa/persons', 'GET', function(req, res){
+    return res.json({
+        "status": "200",
+        "message": "Details listed",
+        "persons": [
+            [{
+                "id": 1,
+                "name": "Purnanga Borah",
+                "subscribed": true
+            }]
+        ]
+    });
+});
+Sandbox.define('/int/persons', 'GET', function(req, res){
+    return res.json({
+        "status": "200",
+        "message": "Details listed",
+        "persons": [
+            [{
+                "id": 1,
+                "name": "Purnanga Borah",
+                "subscribed": true
+            }]
+        ]
+    });
+});
 Sandbox.define('/test/persons', 'GET', function(req, res){
     var id = req.query.id;
     
@@ -82,4 +121,38 @@ Sandbox.define('/prod/persons/{id}', 'DELETE', getUsersHandler);
 
 // Using named route parameters to simulate getting a specific user
 Sandbox.define('/prod/persons/{id}', 'PUT', getUserByUsernameHandler);
+
+
+
+// Using stateful behaviour to simulate creating users
+Sandbox.define('/dev/persons', 'POST', createUserHandler);
+
+// Using stateful behaviour to simulate getting all users
+Sandbox.define('/dev/persons/{id}', 'DELETE', getUsersHandler);
+
+// Using named route parameters to simulate getting a specific user
+Sandbox.define('/dev/persons/{id}', 'PUT', getUserByUsernameHandler);
+
+
+
+// Using stateful behaviour to simulate creating users
+Sandbox.define('/qa/persons', 'POST', createUserHandler);
+
+// Using stateful behaviour to simulate getting all users
+Sandbox.define('/qa/persons/{id}', 'DELETE', getUsersHandler);
+
+// Using named route parameters to simulate getting a specific user
+Sandbox.define('/qa/persons/{id}', 'PUT', getUserByUsernameHandler);
+
+
+
+// Using stateful behaviour to simulate creating users
+Sandbox.define('/int/persons', 'POST', createUserHandler);
+
+// Using stateful behaviour to simulate getting all users
+Sandbox.define('/int/persons/{id}', 'DELETE', getUsersHandler);
+
+// Using named route parameters to simulate getting a specific user
+Sandbox.define('/int/persons/{id}', 'PUT', getUserByUsernameHandler);
+
 
