@@ -62,17 +62,25 @@ Sandbox.define('/dev/persons', 'GET', function(req, res){
     }
 });
 Sandbox.define('/qa/persons', 'GET', function(req, res){
-    return res.json({
-        "status": "200",
-        "message": "Details listed",
-        "persons": [
-            [{
+    var id = req.query.id;
+    
+    
+    if (id == "1") {
+        res.send(200, {
+            "status": "200",
+            "message": "Details listed",
+            "persons": [{
                 "id": 1,
                 "name": "Purnanga Borah",
                 "subscribed": true
             }]
-        ]
-    });
+        });
+    } else {
+        res.send(400, {
+            "status": "400",
+            "message": "ID not existing"
+        });
+    }
 });
 Sandbox.define('/int/persons', 'GET', function(req, res){
     var id = req.query.id;
