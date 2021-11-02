@@ -246,7 +246,6 @@ Sandbox.define('/login','GET', function(req, res){
 })
 
 Sandbox.define('/apikey','GET', function(req, res){
-    
     // Set the type of response, sets the content type.
     res.type('application/json');
     
@@ -256,6 +255,6 @@ Sandbox.define('/apikey','GET', function(req, res){
     // Send the response body.
     res.send({
         "status": "Ok",
-        "apiKey": req.params.apiKey
+        "apiKey": req.get(apiKey)
     });
 })
