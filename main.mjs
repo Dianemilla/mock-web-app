@@ -264,10 +264,11 @@ Sandbox.define('/submit','POST', function(req, res){
     password = req.query.password;
     
     
-    if(userId == "admin" && password=="1234"){
+    if (userId == "admin" && password == "1234") {
         res.status(200);
         //Display consent page
-        
+    
+    res.type('text/html');
         res.send('<html>\
     <head>\
     <title>Sample Login Page for User Consent</title>\
@@ -307,12 +308,10 @@ Sandbox.define('/submit','POST', function(req, res){
     </html>');
     }
     
-    res.type('text/html');
+    
     
     // Set the status code of the response.
     
     // Send the response body.
     //res.render('get');
-    
-    
 })
