@@ -206,7 +206,7 @@ Sandbox.define('/login','GET', function(req, res){
     
     // Send the response body.
     //res.render('get');
-    
+    console.log(clientId);
     res.send('<html>\
     <head>\
     <title>Sample Login Page for User Consent</title>\
