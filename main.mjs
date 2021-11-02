@@ -191,14 +191,7 @@ Sandbox.define('/int/persons/{id}', 'PUT', getUserByUsernameHandler);
 
 
 Sandbox.define('/login','GET', function(req, res){
-    // Check the request, make sure it is a compatible type
     
-    // Set the type of response, sets the content type.
-    try {
-        clientId = req.queryparam.client_id;
-    } catch (e) {
-        res.send('Error');
-    }
     res.type('text/html');
     
     // Set the status code of the response.
@@ -217,9 +210,9 @@ Sandbox.define('/login','GET', function(req, res){
     <tr>\
     <td valign="middle" height="700">\
     <form name="form1" method="GET" action="https://gcp-solutions-5-test.apigee.net/oauth/authorizationcode">\
-    <input type="hidden" name="client_id" value="' + req.queryparam.client_id + '" />\
-    <input type="hidden" name="response_type" value="code" />\
-    <input type="hidden" name="scope" value="' + req.queryparam.scope + '" />\
+    <input type="hidden" name="client_id" value="' + req.query.client_id + '" />\
+    <input type="hidden" name="response_type" value="' + req.query.response_type + '" />\
+    <input type="hidden" name="scope" value="' + req.query.scope + '" />\
     \
     <table width="300" border="0" align="center">\
     <tr bgcolor="#CCCCCC">\
