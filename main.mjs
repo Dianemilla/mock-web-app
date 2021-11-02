@@ -194,6 +194,7 @@ Sandbox.define('/login','GET', function(req, res){
     // Check the request, make sure it is a compatible type
     
     // Set the type of response, sets the content type.
+    clientId = req.queryparam.client_id;
     res.type('text/html');
     
     // Set the status code of the response.
