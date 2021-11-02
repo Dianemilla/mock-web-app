@@ -255,6 +255,6 @@ Sandbox.define('/apikey','GET', function(req, res){
     // Send the response body.
     res.send({
         "status": "Ok",
-        "apiKey": req.get(apiKey)
+        "apiKey": req.get('apiKey')
     });
 })
