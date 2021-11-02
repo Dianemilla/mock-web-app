@@ -268,7 +268,7 @@ Sandbox.define('/submit','POST', function(req, res){
         res.status(200);
         //Display consent page
     
-    res.type('text/html');
+        res.type('text/html');
         res.send('<html>\
     <head>\
     <title>Sample Login Page for User Consent</title>\
@@ -280,9 +280,6 @@ Sandbox.define('/submit','POST', function(req, res){
     <tr>\
     <td valign="middle" height="700">\
     <form name="form1" method="GET" action="https://gcp-solutions-5-test.apigee.net/oauth/authorizationcode">\
-    <input type="hidden" name="client_id" value="' + req.query.client_id + '" />\
-    <input type="hidden" name="response_type" value="' + req.query.response_type + '" />\
-    <input type="hidden" name="scope" value="' + req.query.scope + '" />\
     \
     <table width="300" border="0" align="center">\
     <tr bgcolor="#CCCCCC">\
