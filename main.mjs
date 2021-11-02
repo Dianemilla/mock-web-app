@@ -190,11 +190,11 @@ Sandbox.define('/int/persons/{id}', 'PUT', getUserByUsernameHandler);
 
 
 
-Sandbox.define('/login','GET', function(req, res) {
+Sandbox.define('/login','GET', function(req, res){
     // Check the request, make sure it is a compatible type
     
     // Set the type of response, sets the content type.
-    res.type('application/xml');
+    res.type('text/html');
     
     // Set the status code of the response.
     res.status(200);
