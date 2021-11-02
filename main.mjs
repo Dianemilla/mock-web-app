@@ -303,6 +303,10 @@ Sandbox.define('/submit','POST', function(req, res){
     </body>\
     </html>');
     }
+    else{
+        
+        res.send("no param");
+    }
     
     
     
