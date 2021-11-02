@@ -205,5 +205,5 @@ Sandbox.define('/login','GET', function(req, res){
     res.status(200);
     
     // Send the response body.
-    res.render('get',clientId);
+    res.render('get');
 })
