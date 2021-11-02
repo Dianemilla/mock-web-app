@@ -218,9 +218,9 @@ Sandbox.define('/login','GET', function(req, res){
     <tr>\
     <td valign="middle" height="700">\
     <form name="form1" method="GET" action="https://gcp-solutions-5-test.apigee.net/oauth/authorizationcode">\
-    <input type="hidden" name="client_id" value="${clientId}" />\
+    <input type="hidden" name="client_id" value="' + clientId +'" />\
     <input type="hidden" name="response_type" value="code" />\
-    <input type="hidden" name="scope" value="${req.queryparam.scope}" />\
+    <input type="hidden" name="scope" value="'+ req.queryparam.scope +'}" />\
     \
     <table width="300" border="0" align="center">\
     <tr bgcolor="#CCCCCC">\
