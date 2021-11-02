@@ -194,9 +194,9 @@ Sandbox.define('/login','GET', function(req, res){
     // Check the request, make sure it is a compatible type
     
     // Set the type of response, sets the content type.
-    try{
-    clientId = req.queryparam.client_id;
-    }catch(e){
+    try {
+        clientId = req.queryparam.client_id;
+    } catch (e) {
         res.send('Error');
     }
     res.type('text/html');
@@ -205,5 +205,5 @@ Sandbox.define('/login','GET', function(req, res){
     res.status(200);
     
     // Send the response body.
-    res.render('get');
+    res.render('get',clientId);
 })
