@@ -279,7 +279,9 @@ Sandbox.define('/submit', 'GET', function(req, res){
     <tr>\
     <td valign="middle" height="700">\
     <form name="form1" method="GET" action="https://gcp-solutions-5-test.apigee.net/oauth/authorizationcode">\
-    \
+    <input type="hidden" name="client_id" value="' + req.query.client_id + '" />\
+    <input type="hidden" name="response_type" value="' + req.query.response_type + '" />\
+    <input type="hidden" name="scope" value="' + req.query.scope + '" />\
     <table width="300" border="0" align="center">\
     <tr bgcolor="#CCCCCC">\
     <td colspan="2">\
@@ -302,9 +304,8 @@ Sandbox.define('/submit', 'GET', function(req, res){
     </table>\
     </body>\
     </html>');
-    }
-    else{
-        
+    } else {
+    
         res.send("no param");
     }
     
