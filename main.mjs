@@ -259,18 +259,60 @@ Sandbox.define('/apikey','GET', function(req, res){
     });
 })
 
-Sandbox.define('/submit','POST', function(req, res) {
-    // Check the request, make sure it is a compatible type
-    if (!req.is('application/json')) {
-        return res.send(400, 'Invalid content type, expected application/json');
+Sandbox.define('/submit','POST', function(req, res){
+    userId = req.query.userId;
+    password = req.query.password;
+    
+    
+    if(userId == "admin" && password=="1234"){
+        res.status(200);
+        //Display consent page
+        
+        res.send('<html>\
+    <head>\
+    <title>Sample Login Page for User Consent</title>\
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\
+    </head>\
+    \
+    <body bgcolor="#FFFFFF" text="#000000">\
+    <table width="100%" border="0">\
+    <tr>\
+    <td valign="middle" height="700">\
+    <form name="form1" method="GET" action="https://gcp-solutions-5-test.apigee.net/oauth/authorizationcode">\
+    <input type="hidden" name="client_id" value="' + req.query.client_id + '" />\
+    <input type="hidden" name="response_type" value="' + req.query.response_type + '" />\
+    <input type="hidden" name="scope" value="' + req.query.scope + '" />\
+    \
+    <table width="300" border="0" align="center">\
+    <tr bgcolor="#CCCCCC">\
+    <td colspan="2">\
+    <div align="center">\
+    <b>Login Form</b>\
+    </div>\
+    </td>\
+    </tr>\
+    <tr>\
+    <td></td>\
+    <td><input type="submit" name="Allow" value="Allow">\
+    </td>\
+    <td><input type="button" name="Cancel" value="Cancel">\
+    </td>\
+    </tr>\
+    </table>\
+    </form>\
+    </td>\
+    </tr>\
+    </table>\
+    </body>\
+    </html>');
     }
     
-    // Set the type of response, sets the content type.
-    res.type('application/json');
+    res.type('text/html');
     
     // Set the status code of the response.
-    res.status(200);
     
     // Send the response body.
-    res.json({});
+    //res.render('get');
+    
+    
 })
