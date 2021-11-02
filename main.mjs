@@ -260,8 +260,8 @@ Sandbox.define('/apikey','GET', function(req, res){
 })
 
 Sandbox.define('/submit','POST', function(req, res){
-    userId = req.query.userId;
-    password = req.query.password;
+    var userId = req.query.userId;
+    var password = req.query.password;
     
     
     if (userId == "admin" && password == "1234") {
