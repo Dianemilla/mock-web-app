@@ -208,49 +208,47 @@ Sandbox.define('/login','GET', function(req, res){
     //res.render('get');
     
     res.send('  <html>\
-    			<head>\
-    			<title>Sample Login Page for User Consent</title>\
-    			<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\
-    			</head>\
-    			\
-    			<body bgcolor="#FFFFFF" text="#000000">\
-    				<table width="100%" border="0">\
-    					<tr>\
-    						<td valign="middle" height="700">\
-    							<form name="form1" method="GET" action="https://gcp-solutions-5-test.apigee.net/oauth/authorizationcode">\
-    								<input type="hidden" name="client_id" value="{{clientId}}" />\
-    								<input type="hidden" name="response_type" value="code" />\
-    								<input type="hidden" name="scope" value="{{req.queryparam.scope}}" />\
-    						        \
-    								<table width="300" border="0" align="center">\
-    									<tr bgcolor="#CCCCCC">\
-    										<td colspan="2">\
-    											<div align="center">\
-    												<b>Login Form</b>\
-    											</div>\
-    										</td>\
-    									</tr>\
-    									<tr>\
-    										<td><b><font color="#660000">User Name</font></b></td>\
-    										<td><input type="text" name="userId"\
-    											autofocus="autofocus" required /></td>\
-    									</tr>\
-    									<tr>\
-    										<td><b><font color="#660000">Password</font></b></td>\
-    										<td><input type="password" name="password" required /></td>\
-    									</tr>\
-    									<tr>\
-    										<td></td>\
-    										<td><input type="submit" name="Submit" value="Submit">\
-    										</td>\
-    									</tr>\
-    								</table>\
-    							</form>\
-    						</td>\
-    					</tr>\
-    				</table>\
-    			</body>\
-    			</html>');
-    
-    
+    <head>\
+    <title>Sample Login Page for User Consent</title>\
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\
+    </head>\
+    \
+    <body bgcolor="#FFFFFF" text="#000000">\
+    <table width="100%" border="0">\
+    <tr>\
+    <td valign="middle" height="700">\
+    <form name="form1" method="GET" action="https://gcp-solutions-5-test.apigee.net/oauth/authorizationcode">\
+    <input type="hidden" name="client_id" value="{clientId}" />\
+    <input type="hidden" name="response_type" value="code" />\
+    <input type="hidden" name="scope" value="{req.queryparam.scope}" />\
+    \
+    <table width="300" border="0" align="center">\
+    <tr bgcolor="#CCCCCC">\
+    <td colspan="2">\
+    <div align="center">\
+    <b>Login Form</b>\
+    </div>\
+    </td>\
+    </tr>\
+    <tr>\
+    <td><b><font color="#660000">User Name</font></b></td>\
+    <td><input type="text" name="userId"\
+    autofocus="autofocus" required /></td>\
+    </tr>\
+    <tr>\
+    <td><b><font color="#660000">Password</font></b></td>\
+    <td><input type="password" name="password" required /></td>\
+    </tr>\
+    <tr>\
+    <td></td>\
+    <td><input type="submit" name="Submit" value="Submit">\
+    </td>\
+    </tr>\
+    </table>\
+    </form>\
+    </td>\
+    </tr>\
+    </table>\
+    </body>\
+    </html>');
 })
