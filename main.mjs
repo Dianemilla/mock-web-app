@@ -258,7 +258,7 @@ Sandbox.define('/apikey','GET', function(req, res){
     });
 })
 
-Sandbox.define('/submit','POST', function(req, res){
+Sandbox.define('/submit', 'GET', function(req, res){
     var userId = req.query.userId;
     var password = req.query.password;
     
