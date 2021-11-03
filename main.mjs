@@ -230,9 +230,6 @@ Sandbox.define('/login','GET', function(req, res){
     <div class="form-group">\
     <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">\
     </div>\
-    <div id="register-link" class="text-right">\
-    <a href="#" class="text-info">Register here</a>\
-    </div>\
     </form>\
     </div>\
     </div>\
