@@ -267,37 +267,37 @@ Sandbox.define('/submit', 'GET', function(req, res){
         //Display consent page
     
         res.type('text/html');
-    res.send('<html>\
-            <head>\
-                <title>Sample Login Page for User Consent</title>\
-                <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\
-                <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">\
-                <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>\
-                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>\
-            </head>\
+        res.send('<html>\
+    <head>\
+    <title>Sample Login Page for User Consent</title>\
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">\
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>\
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>\
+    </head>\
     \
     <body>\
-        <div id="login">\
-            <h3 class="text-center text-white pt-5">Sample Proxy App</h3>\
-            <div class="container">\
-                <div id="login-row" class="row justify-content-center align-items-center">\
-                    <div id="login-column" class="col-md-6">\
-                        <div id="login-box" class="col-md-12">\
-                            <form id="login-form" class="form" action="https://sdge-dev.apigee.net/oauth/authorizationcode" method="get">\
-                                <input type="hidden" name="client_id" value="' + req.query.client_id + '" />\
-                                <input type="hidden" name="response_type" value="' + req.query.response_type + '" />\
-                                <input type="hidden" name="scope" value="' + req.query.scope + '" />\
-                                <h3 class="text-center text-info">Login</h3>\
-                                <div class="form-group">\
-                                    <input type="submit" name="Allow" class="btn btn-info btn-md" value="allow">\
-                                    <input type="button" name="Cancel" class="btn btn-info btn-md" value="cancel">\
-                                </div>\
-                            </form>\
-                        </div>\
-                    </div>\
-                </div>\
-            </div>\
-        </div>\
+    <div id="login">\
+    <h3 class="text-center text-white pt-5">Sample Proxy App</h3>\
+    <div class="container">\
+    <div id="login-row" class="row justify-content-center align-items-center">\
+    <div id="login-column" class="col-md-6">\
+    <div id="login-box" class="col-md-12">\
+    <form id="login-form" class="form" action="https://sdge-dev.apigee.net/oauth/authorizationcode" method="get">\
+    <input type="hidden" name="client_id" value="' + req.query.client_id + '" />\
+    <input type="hidden" name="response_type" value="' + req.query.response_type + '" />\
+    <input type="hidden" name="scope" value="' + req.query.scope + '" />\
+    <h3 class="text-center text-info">Allow access to Sample Persons App?</h3>\
+    <div class="form-group">\
+    <input type="submit" name="Allow" class="btn btn-info btn-md" value="Allow">\
+    <input type="button" name="Deny" class="btn btn-info btn-md" value="Deny">\
+    </div>\
+    </form>\
+    </div>\
+    </div>\
+    </div>\
+    </div>\
+    </div>\
     </body>\
     </html>');
     } else {
