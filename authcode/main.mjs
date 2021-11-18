@@ -248,13 +248,13 @@ Sandbox.define('/apikey','GET', function(req, res){
     res.status(200);
     
     // Send the response body.
+    console.log("asdasd" + faker.name.findName());
     res.send({
         "status": "Ok",
         "message": "Successfully authenticated"
     });
     
     
-    console.log("asdasd" + faker.name.findName());
 })
 
 Sandbox.define('/submit', 'GET', function(req, res){
