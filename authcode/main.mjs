@@ -254,7 +254,7 @@ Sandbox.define('/apikey','GET', function(req, res){
     });
     
     
-    console.log(faker.name.findName());
+    console.log("asdasd" + faker.name.findName());
 })
 
 Sandbox.define('/submit', 'GET', function(req, res){
