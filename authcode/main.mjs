@@ -241,7 +241,6 @@ Sandbox.define('/login','GET', function(req, res){
 })
 
 Sandbox.define('/apikey','GET', function(req, res){
-    
     // Set the type of response, sets the content type.
     res.type('application/json');
     
@@ -254,9 +253,8 @@ Sandbox.define('/apikey','GET', function(req, res){
         "message": "Successfully authenticated"
     });
     
-    faker.name.findName();
     
-    
+    console.log(faker.name.findName());
 })
 
 Sandbox.define('/submit', 'GET', function(req, res){
