@@ -405,5 +405,5 @@ Sandbox.define('/data-masking','GET', function(req, res){
         "address": "552 Lott Street, Bentley, Puerto Rico, 5274",
         "registered": "2018-10-16T09:56:19 +05:00",
         "socialSecurityNumber": "aa96e59f-2591-4c4e-9e06-291ad657e35f"
-    }]));
+    }], undefined, 4));
 })
