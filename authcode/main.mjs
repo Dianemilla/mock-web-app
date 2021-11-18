@@ -339,71 +339,71 @@ Sandbox.define('/data-masking','GET', function(req, res){
     res.status(200);
     
     // Send the response body.
-    res.send(200, '[{\
-        "id": 1,\
-        "isActive": true,\
-        "age": 22,\
-        "name": "Larson Hawkins",\
-        "company": "TROPOLIS",\
-        "email": "larsonhawkins@tropolis.com",\
-        "phone": "+1 (875) 487-2436",\
-        "address": "275 Kossuth Place, Cherokee, Louisiana, 3409",\
-        "registered": "2021-03-12T06:52:28 +06:00",\
-        "socialSecurityNumber": "0efeed9b-3df2-4bb7-b22a-255939a6d55d"\
-    }, {\
-        "id": 2,\
-        "isActive": false,\
-        "age": 32,\
-        "name": "Lowery Nash",\
-        "company": "ELENTRIX",\
-        "email": "lowerynash@elentrix.com",\
-        "phone": "+1 (947) 429-2419",\
-        "address": "176 Vine Street, Orovada, Texas, 3862",\
-        "registered": "2018-08-02T05:57:30 +05:00",\
-        "socialSecurityNumber": "82a2410b-6ebc-4771-8750-7539621f9a09"\
-    }, {\
-        "id": 3,\
-        "isActive": false,\
-        "age": 23,\
-        "name": "Marquita Welch",\
-        "company": "STREZZO",\
-        "email": "marquitawelch@strezzo.com",\
-        "phone": "+1 (948) 419-3518",\
-        "address": "415 Meadow Street, Homeland, Arkansas, 2381",\
-        "registered": "2016-12-03T04:02:35 +06:00",\
-        "socialSecurityNumber": "f39abcd4-b770-48ee-b7a9-8a05ca045627"\
-    }, {\
-        "id": 4,\
-        "isActive": false,\
-        "age": 22,\
-        "name": "Randi Jenkins",\
-        "company": "BUZZOPIA",\
-        "email": "randijenkins@buzzopia.com",\
-        "phone": "+1 (855) 493-3179",\
-        "address": "993 Broome Street, Bendon, Arizona, 3801",\
-        "registered": "2020-04-12T09:43:19 +05:00",\
-        "socialSecurityNumber": "53184510-2891-4391-9beb-8dfb262ab550"\
-    }, {\
-        "id": 5,\
-        "isActive": true,\
-        "age": 36,\
-        "name": "Lula Cooley",\
-        "company": "SUPPORTAL",\
-        "email": "lulacooley@supportal.com",\
-        "phone": "+1 (942) 578-3630",\
-        "address": "529 Everett Avenue, Fairacres, Kansas, 5160",\
-        "registered": "2019-08-22T10:58:24 +05:00",\
-        "socialSecurityNumber": "1b2221e7-8d54-4796-bf82-9dd64a843f6d"\
-    }, {\
-        "id": 6,\
-        "isActive": true,\
-        "age": 22,\
-        "name": "Frazier Ewing",\
-        "company": "SEQUITUR",\
-        "email": "frazierewing@sequitur.com",\
-        "phone": "+1 (836) 524-3689",\
-        "address": "552 Lott Street, Bentley, Puerto Rico, 5274",\
-        "registered": "2018-10-16T09:56:19 +05:00",\
-        "socialSecurityNumber": "aa96e59f-2591-4c4e-9e06-291ad657e35f"\
-    }]');
+    res.send(200, JSON.stringify([{
+        "id": 1,
+        "isActive": true,
+        "age": 22,
+        "name": "Larson Hawkins",
+        "company": "TROPOLIS",
+        "email": "larsonhawkins@tropolis.com",
+        "phone": "+1 (875) 487-2436",
+        "address": "275 Kossuth Place, Cherokee, Louisiana, 3409",
+        "registered": "2021-03-12T06:52:28 +06:00",
+        "socialSecurityNumber": "0efeed9b-3df2-4bb7-b22a-255939a6d55d"
+    }, {
+        "id": 2,
+        "isActive": false,
+        "age": 32,
+        "name": "Lowery Nash",
+        "company": "ELENTRIX",
+        "email": "lowerynash@elentrix.com",
+        "phone": "+1 (947) 429-2419",
+        "address": "176 Vine Street, Orovada, Texas, 3862",
+        "registered": "2018-08-02T05:57:30 +05:00",
+        "socialSecurityNumber": "82a2410b-6ebc-4771-8750-7539621f9a09"
+    }, {
+        "id": 3,
+        "isActive": false,
+        "age": 23,
+        "name": "Marquita Welch",
+        "company": "STREZZO",
+        "email": "marquitawelch@strezzo.com",
+        "phone": "+1 (948) 419-3518",
+        "address": "415 Meadow Street, Homeland, Arkansas, 2381",
+        "registered": "2016-12-03T04:02:35 +06:00",
+        "socialSecurityNumber": "f39abcd4-b770-48ee-b7a9-8a05ca045627"
+    }, {
+        "id": 4,
+        "isActive": false,
+        "age": 22,
+        "name": "Randi Jenkins",
+        "company": "BUZZOPIA",
+        "email": "randijenkins@buzzopia.com",
+        "phone": "+1 (855) 493-3179",
+        "address": "993 Broome Street, Bendon, Arizona, 3801",
+        "registered": "2020-04-12T09:43:19 +05:00",
+        "socialSecurityNumber": "53184510-2891-4391-9beb-8dfb262ab550"
+    }, {
+        "id": 5,
+        "isActive": true,
+        "age": 36,
+        "name": "Lula Cooley",
+        "company": "SUPPORTAL",
+        "email": "lulacooley@supportal.com",
+        "phone": "+1 (942) 578-3630",
+        "address": "529 Everett Avenue, Fairacres, Kansas, 5160",
+        "registered": "2019-08-22T10:58:24 +05:00",
+        "socialSecurityNumber": "1b2221e7-8d54-4796-bf82-9dd64a843f6d"
+    }, {
+        "id": 6,
+        "isActive": true,
+        "age": 22,
+        "name": "Frazier Ewing",
+        "company": "SEQUITUR",
+        "email": "frazierewing@sequitur.com",
+        "phone": "+1 (836) 524-3689",
+        "address": "552 Lott Street, Bentley, Puerto Rico, 5274",
+        "registered": "2018-10-16T09:56:19 +05:00",
+        "socialSecurityNumber": "aa96e59f-2591-4c4e-9e06-291ad657e35f"
+    }]));
 })
