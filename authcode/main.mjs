@@ -339,71 +339,90 @@ Sandbox.define('/data-masking','GET', function(req, res){
     res.status(200);
     
     // Send the response body.
-    res.send(200, JSON.stringify([{
+    res.send(200, JSON.stringify([[
+      {
+        "id": 0,
+        "isActive": true,
+        "age": 34,
+        "name": "Wendi Rodriguez",
+        "company": "RADIANTIX",
+        "email": "wendirodriguez@radiantix.com",
+        "phone": "+1 (856) 438-2448",
+        "address": "982 Nevins Street, Reno, Iowa, 6685",
+        "registered": "2015-01-15T03:41:09 +06:00",
+        "socialSecurityNumber": "0c116859-5992-45b6-8f87-2bc7cfe5500d"
+      },
+      {
         "id": 1,
         "isActive": true,
-        "age": 22,
-        "name": "Larson Hawkins",
-        "company": "TROPOLIS",
-        "email": "larsonhawkins@tropolis.com",
-        "phone": "+1 (875) 487-2436",
-        "address": "275 Kossuth Place, Cherokee, Louisiana, 3409",
-        "registered": "2021-03-12T06:52:28 +06:00",
-        "socialSecurityNumber": "0efeed9b-3df2-4bb7-b22a-255939a6d55d"
-    }, {
+        "age": 39,
+        "name": "Rosetta Alvarez",
+        "company": "WEBIOTIC",
+        "email": "rosettaalvarez@webiotic.com",
+        "phone": "+1 (841) 541-3856",
+        "address": "259 Pineapple Street, Manchester, Alabama, 2440",
+        "registered": "2015-07-26T01:16:25 +05:00",
+        "socialSecurityNumber": "7607b9e8-b109-4c85-ba3e-761c7db3502b"
+      },
+      {
         "id": 2,
         "isActive": false,
-        "age": 32,
-        "name": "Lowery Nash",
-        "company": "ELENTRIX",
-        "email": "lowerynash@elentrix.com",
-        "phone": "+1 (947) 429-2419",
-        "address": "176 Vine Street, Orovada, Texas, 3862",
-        "registered": "2018-08-02T05:57:30 +05:00",
-        "socialSecurityNumber": "82a2410b-6ebc-4771-8750-7539621f9a09"
-    }, {
+        "age": 39,
+        "name": "Rosalyn Wallace",
+        "company": "EXTRAWEAR",
+        "email": "rosalynwallace@extrawear.com",
+        "phone": "+1 (934) 469-2003",
+        "address": "336 Maple Avenue, Eggertsville, Missouri, 9359",
+        "registered": "2019-07-30T11:50:35 +05:00",
+        "socialSecurityNumber": "3887b546-2817-4395-a26a-ac1352535c42"
+      },
+      {
         "id": 3,
-        "isActive": false,
-        "age": 23,
-        "name": "Marquita Welch",
-        "company": "STREZZO",
-        "email": "marquitawelch@strezzo.com",
-        "phone": "+1 (948) 419-3518",
-        "address": "415 Meadow Street, Homeland, Arkansas, 2381",
-        "registered": "2016-12-03T04:02:35 +06:00",
-        "socialSecurityNumber": "f39abcd4-b770-48ee-b7a9-8a05ca045627"
-    }, {
-        "id": 4,
-        "isActive": false,
-        "age": 22,
-        "name": "Randi Jenkins",
-        "company": "BUZZOPIA",
-        "email": "randijenkins@buzzopia.com",
-        "phone": "+1 (855) 493-3179",
-        "address": "993 Broome Street, Bendon, Arizona, 3801",
-        "registered": "2020-04-12T09:43:19 +05:00",
-        "socialSecurityNumber": "53184510-2891-4391-9beb-8dfb262ab550"
-    }, {
-        "id": 5,
         "isActive": true,
         "age": 36,
-        "name": "Lula Cooley",
-        "company": "SUPPORTAL",
-        "email": "lulacooley@supportal.com",
-        "phone": "+1 (942) 578-3630",
-        "address": "529 Everett Avenue, Fairacres, Kansas, 5160",
-        "registered": "2019-08-22T10:58:24 +05:00",
-        "socialSecurityNumber": "1b2221e7-8d54-4796-bf82-9dd64a843f6d"
-    }, {
-        "id": 6,
+        "name": "Dunn Deleon",
+        "company": "SENSATE",
+        "email": "dunndeleon@sensate.com",
+        "phone": "+1 (807) 465-2387",
+        "address": "186 Aitken Place, Trinway, Ohio, 3355",
+        "registered": "2015-09-13T08:48:24 +05:00",
+        "socialSecurityNumber": "87de94e1-a3bc-458b-94f3-9707eeebecd9"
+      },
+      {
+        "id": 4,
         "isActive": true,
-        "age": 22,
-        "name": "Frazier Ewing",
-        "company": "SEQUITUR",
-        "email": "frazierewing@sequitur.com",
-        "phone": "+1 (836) 524-3689",
-        "address": "552 Lott Street, Bentley, Puerto Rico, 5274",
-        "registered": "2018-10-16T09:56:19 +05:00",
-        "socialSecurityNumber": "aa96e59f-2591-4c4e-9e06-291ad657e35f"
-    }], undefined, 4));
+        "age": 26,
+        "name": "Eva Byers",
+        "company": "FIBEROX",
+        "email": "evabyers@fiberox.com",
+        "phone": "+1 (916) 431-2259",
+        "address": "848 Johnson Street, Greensburg, Connecticut, 5080",
+        "registered": "2018-10-16T01:33:31 +05:00",
+        "socialSecurityNumber": "5ddaa1ab-63ec-4844-a06e-28d2226c2679"
+      },
+      {
+        "id": 5,
+        "isActive": false,
+        "age": 40,
+        "name": "Sandoval Mason",
+        "company": "FUELWORKS",
+        "email": "sandovalmason@fuelworks.com",
+        "phone": "+1 (950) 490-3129",
+        "address": "987 Howard Place, Vienna, Indiana, 6276",
+        "registered": "2021-08-08T02:11:24 +05:00",
+        "socialSecurityNumber": "1909124a-b638-4544-84ce-b9e09b52486f"
+      },
+      {
+        "id": 6,
+        "isActive": false,
+        "age": 35,
+        "name": "Adrienne Guerrero",
+        "company": "TETAK",
+        "email": "adrienneguerrero@tetak.com",
+        "phone": "+1 (865) 526-3043",
+        "address": "161 Branton Street, Lowgap, Puerto Rico, 7705",
+        "registered": "2020-03-21T12:08:16 +05:00",
+        "socialSecurityNumber": "9bc76ea5-d4b6-4a42-a20e-c4ac6126e87c"
+      }
+    ]], undefined, 4));
 })
