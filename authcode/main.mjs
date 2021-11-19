@@ -339,7 +339,7 @@ Sandbox.define('/data-masking','GET', function(req, res){
     res.status(200);
     
     // Send the response body.
-    res.send(200, JSON.stringify(
+    res.send(200, JSON.stringify([
         [{
             "id": 0,
             "isActive": true,
@@ -350,7 +350,7 @@ Sandbox.define('/data-masking','GET', function(req, res){
             "phone": "+1 (856) 438-2448",
             "address": "982 Nevins Street, Reno, Iowa, 6685",
             "registered": "2015-01-15T03:41:09 +06:00",
-            "socialSecurityNumber": "0c116859-5992-45b6-8f87-2bc7cfe5500d"
+            "socialSecurityNumber": "111-11-1111"
         }, {
             "id": 1,
             "isActive": true,
@@ -361,7 +361,7 @@ Sandbox.define('/data-masking','GET', function(req, res){
             "phone": "+1 (841) 541-3856",
             "address": "259 Pineapple Street, Manchester, Alabama, 2440",
             "registered": "2015-07-26T01:16:25 +05:00",
-            "socialSecurityNumber": "7607b9e8-b109-4c85-ba3e-761c7db3502b"
+            "socialSecurityNumber": "111-11-1112"
         }, {
             "id": 2,
             "isActive": false,
@@ -372,7 +372,7 @@ Sandbox.define('/data-masking','GET', function(req, res){
             "phone": "+1 (934) 469-2003",
             "address": "336 Maple Avenue, Eggertsville, Missouri, 9359",
             "registered": "2019-07-30T11:50:35 +05:00",
-            "socialSecurityNumber": "3887b546-2817-4395-a26a-ac1352535c42"
+            "socialSecurityNumber": "111-11-1113"
         }, {
             "id": 3,
             "isActive": true,
@@ -383,7 +383,7 @@ Sandbox.define('/data-masking','GET', function(req, res){
             "phone": "+1 (807) 465-2387",
             "address": "186 Aitken Place, Trinway, Ohio, 3355",
             "registered": "2015-09-13T08:48:24 +05:00",
-            "socialSecurityNumber": "87de94e1-a3bc-458b-94f3-9707eeebecd9"
+            "socialSecurityNumber": "111-11-1114"
         }, {
             "id": 4,
             "isActive": true,
@@ -394,7 +394,7 @@ Sandbox.define('/data-masking','GET', function(req, res){
             "phone": "+1 (916) 431-2259",
             "address": "848 Johnson Street, Greensburg, Connecticut, 5080",
             "registered": "2018-10-16T01:33:31 +05:00",
-            "socialSecurityNumber": "5ddaa1ab-63ec-4844-a06e-28d2226c2679"
+            "socialSecurityNumber": "111-11-1115"
         }, {
             "id": 5,
             "isActive": false,
@@ -405,7 +405,7 @@ Sandbox.define('/data-masking','GET', function(req, res){
             "phone": "+1 (950) 490-3129",
             "address": "987 Howard Place, Vienna, Indiana, 6276",
             "registered": "2021-08-08T02:11:24 +05:00",
-            "socialSecurityNumber": "1909124a-b638-4544-84ce-b9e09b52486f"
+            "socialSecurityNumber": "111-11-1116"
         }, {
             "id": 6,
             "isActive": false,
@@ -416,7 +416,7 @@ Sandbox.define('/data-masking','GET', function(req, res){
             "phone": "+1 (865) 526-3043",
             "address": "161 Branton Street, Lowgap, Puerto Rico, 7705",
             "registered": "2020-03-21T12:08:16 +05:00",
-            "socialSecurityNumber": "9bc76ea5-d4b6-4a42-a20e-c4ac6126e87c"
-        }
+            "socialSecurityNumber": "111-11-1117"
+        }]
     ], undefined, 4));
 })
