@@ -339,7 +339,7 @@ Sandbox.define('/data-masking','GET', function(req, res){
     res.status(200);
     
     // Send the response body.
-    res.send(200, JSON.stringify([
+    res.send(200, JSON.stringify(
         [{
             "id": 0,
             "isActive": true,
@@ -417,6 +417,6 @@ Sandbox.define('/data-masking','GET', function(req, res){
             "address": "161 Branton Street, Lowgap, Puerto Rico, 7705",
             "registered": "2020-03-21T12:08:16 +05:00",
             "socialSecurityNumber": "111-11-1117"
-        }]
+        }
     ], undefined, 4));
 })
